@@ -2,9 +2,9 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-# Load the model and vectorizer
-model = joblib.load('C:/Users/HP/Documents/Streamlit_Senti_Analysis_Project/lr_model.pkl')
-vectorizer = joblib.load('C:/Users/HP/Documents/Streamlit_Senti_Analysis_Project/tfidf_vectorizer.pkl')
+# Load the model and vectorizer from the current directory
+model = joblib.load('lr_model.pkl')  # No need for 'C:/Users/HP/Documents/...'
+vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 # Streamlit app
 st.title("Sentiment Analysis App")
